@@ -1,0 +1,84 @@
+*tataku-processor-eta.txt*                The processor module for tataku.vim
+=============================================================================
+tataku-processor-eta ~
+                                                       *tataku-processor-eta*
+
+The processor module using eta template engine.
+
+**CURRENTLY THIS PLUGIN IS EXPERIMENTAL**
+
+Contents ~
+                                              *tataku-processor-eta-contents*
+
+- Dependencies |tataku-processor-eta-dependencies|
+- Options |tataku-processor-eta-options|
+- Samples |tataku-processor-eta-samples|
+
+Dependencies ~
+                                          *tataku-processor-eta-dependencies*
+
+This plugin needs:
+
+- denops.vim |https://github.com/vim-denops/denops.vim|
+- tataku.vim |https://github.com/Omochice/tataku.vim|
+
+Options ~
+                                               *tataku-processor-eta-options*
+
+This module has some options.
+
+- `type` *tataku-processor-eta-options-type*
+
+  Template rendering type.
+  `"direct"` use |tataku-processor-eta-options-template| as template string.
+  `"file"` use |tataku-processor-eta-options-templateDirectory| and
+  |tataku-processor-eta-options-templateFileName| as template file.
+- `template` *tataku-processor-eta-options-template*
+
+  Template string.
+  It use only when specify |tataku-processor-eta-options-type| is `"direct"`.
+- `templateDirectory` *tataku-processor-eta-options-templateDirectory*
+
+  Path to directory that has template files.
+  It use only when specify |tataku-processor-eta-options-type| is `"file"`.
+- `templateFileName` *tataku-processor-eta-options-templateFileName*
+
+  Template file name.
+  It use only when specify |tataku-processor-eta-options-type| is `"file"`.
+
+Predefined variales ~
+                                  *tataku-processor-eta-predefined_variables*
+
+When render template string, this module provide some predefined variables.
+
+They are able to be used as `it` object.
+
+- `content` *tataku-processor-eta-options-context-content*
+
+  String that processed before this module.
+- `fletype` *tataku-processor-eta-options-context-filetype*
+
+  Filetype string of buffer that executed tataku.
+- `mode` *tataku-processor-eta-options-context-mode*
+
+  Current vim type, `"vim"` or `"nvim"`.
+
+Samples ~
+                                               *tataku-processor-eta-samples*
+
+>
+	let g:tataku_recipes = #{
+	  \   sample: #{
+	  \     processor: #{
+	  \       name: 'eta',
+	  \       options: #{
+	  \         type: 'direct',
+	  \         template: '<%= it.content %> <%= it.filetype =>',
+	  \       },
+	  \     }
+	  \   }
+	  \ }
+<
+
+
+vim:tw=78:ts=8:noet:ft=help:norl:
