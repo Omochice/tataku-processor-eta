@@ -1,4 +1,4 @@
-import { Denops } from "https://deno.land/x/denops_std@v5.0.1/mod.ts";
+import { Denops } from "https://deno.land/x/denops_std@v5.2.0/mod.ts";
 import { Eta } from "https://deno.land/x/eta@v3.2.0/src/index.ts";
 import * as vars from "https://deno.land/x/denops_std@v5.2.0/variable/mod.ts";
 import {
