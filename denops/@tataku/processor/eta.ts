@@ -1,5 +1,5 @@
 import { Denops } from "https://deno.land/x/denops_std@v6.4.0/mod.ts";
-import { Eta } from "https://deno.land/x/eta@v3.2.0/src/index.ts";
+import { Eta } from "https://deno.land/x/eta@v3.3.0/src/index.ts";
 import * as vars from "https://deno.land/x/denops_std@v6.4.0/variable/mod.ts";
 import {
   assert,
