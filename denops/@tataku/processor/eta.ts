@@ -1,6 +1,6 @@
-import { Denops } from "https://deno.land/x/denops_std@v6.4.2/mod.ts";
+import { Denops } from "https://deno.land/x/denops_std@v6.4.3/mod.ts";
 import { Eta } from "https://deno.land/x/eta@v3.4.0/src/index.ts";
-import * as vars from "https://deno.land/x/denops_std@v6.4.2/variable/mod.ts";
+import * as vars from "https://deno.land/x/denops_std@v6.4.3/variable/mod.ts";
 import {
   assert,
   ensure,
