@@ -9,8 +9,6 @@ description: The processor module for tataku.vim
 
 The processor module using eta template engine.
 
-**CURRENTLY THIS PLUGIN IS EXPERIMENTAL**
-
 =head2 Contents X<tataku-processor-eta-contents>
 
 =over 0
