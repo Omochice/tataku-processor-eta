@@ -1,7 +1,7 @@
 import { Denops } from "jsr:@denops/std@7.0.3";
 import { Eta } from "jsr:@eta-dev/eta@3.4.0";
 import * as vars from "jsr:@denops/std@7.0.3/variable";
-import { assert, ensure, is } from "jsr:@core/unknownutil@3.18.1";
+import { assert, ensure, is } from "jsr:@core/unknownutil@4.0.3";
 
 const isDirectOption = is.ObjectOf({
   type: is.LiteralOf("direct"),
@@ -14,7 +14,7 @@ const isFileOption = is.ObjectOf({
   templateFileName: is.String,
 });
 
-const isOption = is.OneOf([isDirectOption, isFileOption]);
+const isOption = is.UnionOf([isDirectOption, isFileOption]);
 
 const processor = (denops: Denops, option: unknown) => {
   assert(option, isOption);
