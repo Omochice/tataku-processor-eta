@@ -14,7 +14,7 @@ const isFileOption = is.ObjectOf({
   templateFileName: is.String,
 });
 
-const isOption = is.OneOf([isDirectOption, isFileOption]);
+const isOption = is.UnionOf([isDirectOption, isFileOption]);
 
 const processor = (denops: Denops, option: unknown) => {
   assert(option, isOption);
