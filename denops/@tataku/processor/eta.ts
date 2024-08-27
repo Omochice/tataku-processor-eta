@@ -1,6 +1,6 @@
-import { Denops } from "jsr:@denops/std@7.0.3";
+import { Denops } from "jsr:@denops/std@7.1.1";
 import { Eta } from "jsr:@eta-dev/eta@3.5.0";
-import * as vars from "jsr:@denops/std@7.0.3/variable";
+import * as vars from "jsr:@denops/std@7.1.1/variable";
 import { assert, ensure, is } from "jsr:@core/unknownutil@4.3.0";
 
 const isDirectOption = is.ObjectOf({
